@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Link Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-image: url('https://images.pagina12.com.ar/styles/focal_16_9_960x540/public/2023-10/582984-dolar-20argentina.jpg?h=080d5567&itok=CClLVmIp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            border: 5px solid #70e000; /* Color of the border around the profile picture */
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-wrapper {
+            background-color: #ffbf69; /* Background color of the links */
+            border-radius: 5px; /* Rounded corners */
+            padding: 5px; /* Space between the link and the edges */
+            /* Removed border property to eliminate green border */
+        }
+
+        .links a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: black; /* Text color inside the links */
+            background-color: #f8f9fa; /* Background color of the links */
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 1rem; /* Reduced font size */
+            transition: background-color 0.3s ease;
+            justify-content: space-between; /* To place the image on the right side */
+        }
+
+        .links a img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .links a:hover {
+            background-color: #e2e6ea; /* Background color on hover */
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Profile picture -->
+        <img class="profile-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgnzqGQi3ElSkPloManjKzrxkS6jD6n-pirg&s" alt="Profile Image">
+        
+        <!-- New title -->
+        <h1>IShow Speed giveaway</h1>
+        <p>Complete these two steps to receive the gift you selected.</p>
+
+        <!-- Links -->
+        <div class="links">
+            <!-- First link with the new text and image -->
+            <div class="link-wrapper">
+                <a href="#" target="_blank">
+                    Install the Tiktok App and Run it for 60 Seconds
+                    <img src="https://d1rluokkqqu56n.cloudfront.net/wpapp/uploads/2021/10/22122502/potentiel-marque-TikTok.jpg.webp" alt="Icon 1">
+                </a>
+            </div>
+            <!-- Second link with the new text and image -->
+            <div class="link-wrapper">
+                <a href="#" target="_blank">
+                    Finish a Short Deal to Win a Free Surprise Samples Box Now!
+                    <img src="https://i.gyazo.com/0f3d0cf2ee45342967fb9c1e19f80b45.png" alt="Icon 2">
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 All rights reserved</p>
+        </footer>
+    </div>
+
+</body>
+</html>
