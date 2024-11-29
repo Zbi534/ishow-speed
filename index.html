@@ -35,6 +35,15 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
 
+        /* الصورة الدائرية */
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
         p {
             font-size: 1rem;
             margin-bottom: 20px;
@@ -47,9 +56,14 @@
         }
 
         .link-wrapper {
-            background-color: #ffbf69;
+            background-color: #ffd500; /* اللون الأصفر */
             border-radius: 5px;
             padding: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .link-wrapper:hover {
+            transform: scale(1.05); /* Adds scale effect */
         }
 
         .links a {
@@ -62,13 +76,15 @@
             border-radius: 5px;
             font-size: 1rem;
             transition: background-color 0.3s ease;
-            justify-content: space-between;
+            justify-content: flex-start; /* النص في اليمين والصورة في اليسار */
         }
 
+        /* الصورة داخل الرابط تكون في اليسار */
         .links a img {
-            width: 30px;
-            height: 30px;
+            width: 50px; /* تكبير الصورة هنا */
+            height: 50px; /* تكبير الصورة هنا */
             border-radius: 50%;
+            margin-right: 15px; /* مسافة بين الصورة والنص */
         }
 
         .links a:hover {
@@ -79,26 +95,38 @@
             margin-top: 20px;
             font-size: 0.9rem;
         }
+
+        /* Responsive Design */
+        @media (max-width: 500px) {
+            .container {
+                padding: 15px;
+            }
+
+            .profile-image {
+                width: 80px;
+                height: 80px;
+            }
+
+            .links a {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <p>Complete these two steps to receive the gift you selected.</p>
+        <!-- الصورة الدائرية -->
+        <img src="https://i.imgur.com/irqc1cT.jpeg" alt="User Profile Picture" class="profile-image">
+
+        <p>Complete these steps to receive your chosen gift.</p>
 
         <div class="links">
             <div class="link-wrapper">
                 <a href="https://smrturl.co/a/sa12d76e997/86?s1=" target="_blank">
+                    <img src="https://sf-static.tiktokcdn.com/obj/eden-sg/uhtyvueh7nulogpoguhm/tiktok-icon2.png" alt="TikTok App Icon">
                     Install the Tiktok App and Run it for 60 Seconds
-                    <img src="https://d1rluokkqqu56n.cloudfront.net/wpapp/uploads/2021/10/22122502/potentiel-marque-TikTok.jpg.webp" alt="Icon 1">
                 </a>
-            </div>
-            <div class="link-wrapper">
-                <a href="https://smrturl.co/a/sa12d76e997/91?s1=" target="_blank">
-                    Fill out the Taco Bell survey!
-                    <img src="https://upload.wikimedia.org/wikipedia/en/b/b3/Taco_Bell_2016.svg" alt="Taco Bell Icon">
-                </a>
-            </div>
         </div>
 
         <footer>
