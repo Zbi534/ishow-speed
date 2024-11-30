@@ -26,13 +26,25 @@
         }
 
         .container {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.7); /* زيادة وضوح الخلفية */
             width: 100%;
             max-width: 400px;
             text-align: center;
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* تحسين الظل */
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* الصورة الدائرية */
@@ -47,6 +59,15 @@
         p {
             font-size: 1rem;
             margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* إضافة ظل للنص */
+        }
+
+        /* الجملة تحت الصورة */
+        .giveaway-text {
+            font-size: 1.1rem;
+            color: #ffffff; /* اللون الأبيض */
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* إضافة ظل للنص */
         }
 
         .links {
@@ -59,11 +80,13 @@
             background-color: #ffd500; /* اللون الأصفر */
             border-radius: 5px;
             padding: 5px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         .link-wrapper:hover {
-            transform: scale(1.05); /* Adds scale effect */
+            transform: scale(1.1); /* زيادة التأثير عند التمرير */
+            background-color: #ffce00; /* تغيير اللون عند التمرير */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* إضافة ظل */
         }
 
         .links a {
@@ -75,20 +98,26 @@
             padding: 15px;
             border-radius: 5px;
             font-size: 1rem;
-            transition: background-color 0.3s ease;
-            justify-content: flex-start; /* النص في اليمين والصورة في اليسار */
+            justify-content: flex-start;
+            transition: all 0.3s ease;
         }
 
-        /* الصورة داخل الرابط تكون في اليسار */
         .links a img {
-            width: 50px; /* تكبير الصورة هنا */
-            height: 50px; /* تكبير الصورة هنا */
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            margin-right: 15px; /* مسافة بين الصورة والنص */
+            margin-right: 15px;
+            border: 2px solid #ffd500; /* إضافة حدود مميزة للأيقونات */
+            transition: border-color 0.3s ease;
         }
 
         .links a:hover {
-            background-color: #e2e6ea;
+            background-color: #ffe680; /* لون فاتح عند التمرير */
+            color: #333; /* لون نص أوضح */
+        }
+
+        .links a:hover img {
+            border-color: #ffae00; /* تغيير لون الحدود عند التمرير */
         }
 
         footer {
@@ -111,6 +140,18 @@
                 font-size: 0.9rem;
             }
         }
+
+        @media (max-width: 400px) {
+            .profile-image {
+                width: 70px;
+                height: 70px;
+            }
+
+            .links a {
+                font-size: 0.8rem;
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -118,6 +159,9 @@
     <div class="container">
         <!-- الصورة الدائرية -->
         <img src="https://i.imgur.com/irqc1cT.jpeg" alt="User Profile Picture" class="profile-image">
+
+        <!-- الجملة تحت الصورة -->
+        <p class="giveaway-text">Adam giveaway</p>
 
         <p>Complete these steps to receive your chosen gift.</p>
 
@@ -127,6 +171,7 @@
                     <img src="https://sf-static.tiktokcdn.com/obj/eden-sg/uhtyvueh7nulogpoguhm/tiktok-icon2.png" alt="TikTok App Icon">
                     Install the Tiktok App and Run it for 60 Seconds
                 </a>
+            </div>
         </div>
 
         <footer>
